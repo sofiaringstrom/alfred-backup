@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>48467684-F85F-4DCE-ADB3-F8564FCBD781</key>
+		<array/>
+		<key>59B7493F-3BDE-4C2E-9BC1-22A276EDB7EE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9C403781-9D09-41F4-A06B-42A1845C7814</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D790E2B2-6DB5-471D-90F3-5CE195CE5194</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9CFD9692-197C-4C4E-8279-CFD94478E010</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AFCFA910-A258-4815-8C8E-18492B58F298</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AB458AFE-0DA1-4D8D-BF7D-3BE13FD83DCB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>59B7493F-3BDE-4C2E-9BC1-22A276EDB7EE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D790E2B2-6DB5-471D-90F3-5CE195CE5194</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9CFD9692-197C-4C4E-8279-CFD94478E010</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E08F981D-5732-41B3-9347-2ED8B0E8CA4A</key>
+		<array/>
+		<key>F32910BF-8AE3-4027-AA06-7B177FEDA53D</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Sleep in</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function run() {
+  var query = var.inputHours;
+	
+  var seconds = parseInt(query);
+
+  var hours = seconds / 3600;
+
+  return hours;
+}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F32910BF-8AE3-4027-AA06-7B177FEDA53D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+	set strJSON to "{\"alfredworkflow\": {\"variables\": {"
+
+	set strJSON to strJSON &amp; "\"HOURS\": \"{argv}\", "
+
+	set strJSON to strJSON &amp; "}}}"
+
+	return strJSON
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>48467684-F85F-4DCE-ADB3-F8564FCBD781</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>HOURS</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E08F981D-5732-41B3-9347-2ED8B0E8CA4A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>sleep in</string>
+				<key>subtext</key>
+				<string>hours</string>
+				<key>text</key>
+				<string>Sleep in...</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>AB458AFE-0DA1-4D8D-BF7D-3BE13FD83DCB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>I will go to sleep in {query} hours</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9C403781-9D09-41F4-A06B-42A1845C7814</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Yepp</string>
+				<key>button2</key>
+				<string>Nope</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string></string>
+				<key>title</key>
+				<string>Are you sure?</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>59B7493F-3BDE-4C2E-9BC1-22A276EDB7EE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function run() {
+  var query = "{query}";
+	
+  var hours = parseInt(query);
+
+  var seconds = (hours * 60) * 60;
+  /** var seconds = hours; **/
+
+  return seconds;
+}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D790E2B2-6DB5-471D-90F3-5CE195CE5194</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>9CFD9692-197C-4C4E-8279-CFD94478E010</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>command</key>
+				<integer>5</integer>
+				<key>confirm</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.systemcommand</string>
+			<key>uid</key>
+			<string>AFCFA910-A258-4815-8C8E-18492B58F298</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>48467684-F85F-4DCE-ADB3-F8564FCBD781</key>
+		<dict>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>59B7493F-3BDE-4C2E-9BC1-22A276EDB7EE</key>
+		<dict>
+			<key>xpos</key>
+			<real>100</real>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>9C403781-9D09-41F4-A06B-42A1845C7814</key>
+		<dict>
+			<key>xpos</key>
+			<real>260</real>
+			<key>ypos</key>
+			<real>150</real>
+		</dict>
+		<key>9CFD9692-197C-4C4E-8279-CFD94478E010</key>
+		<dict>
+			<key>xpos</key>
+			<real>430</real>
+			<key>ypos</key>
+			<real>305</real>
+		</dict>
+		<key>AB458AFE-0DA1-4D8D-BF7D-3BE13FD83DCB</key>
+		<dict>
+			<key>xpos</key>
+			<real>35</real>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>AFCFA910-A258-4815-8C8E-18492B58F298</key>
+		<dict>
+			<key>xpos</key>
+			<real>495</real>
+			<key>ypos</key>
+			<real>375</real>
+		</dict>
+		<key>D790E2B2-6DB5-471D-90F3-5CE195CE5194</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>280</real>
+		</dict>
+		<key>E08F981D-5732-41B3-9347-2ED8B0E8CA4A</key>
+		<dict>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>F32910BF-8AE3-4027-AA06-7B177FEDA53D</key>
+		<dict>
+			<key>xpos</key>
+			<real>495</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
