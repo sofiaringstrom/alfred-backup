@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>chromeprofiles.alfredworkflow</string>
+	<key>connections</key>
+	<dict>
+		<key>03B29E8B-5519-4DF5-8D5A-42A32063AC9C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C8A61AA2-741B-4953-A06F-AA8D3A249149</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C8A61AA2-741B-4953-A06F-AA8D3A249149</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B11B354A-0180-492E-89EA-E105899AB2F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>964DAF86-D1AB-48B8-ABAE-08B9D6C48A78</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>71273B16-E981-4C44-AC42-96D302F3F0E1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>89405FCD-16B2-497B-8160-24258B6B12A7</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A62B3186-CA3E-44D2-931E-B1070E58AD2D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>9DEF4A0A-3685-4FFD-BB4D-F3FBB7EB00A1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>AOnly</string>
+	<key>description</key>
+	<string>Open Specific Chrome Profile</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Chrome Profiles</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Default"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B11B354A-0180-492E-89EA-E105899AB2F5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>chrome</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open Chrome Profile</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>03B29E8B-5519-4DF5-8D5A-42A32063AC9C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>Private</string>
+						<key>outputlabel</key>
+						<string>Default</string>
+						<key>uid</key>
+						<string>964DAF86-D1AB-48B8-ABAE-08B9D6C48A78</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>2</string>
+						<key>outputlabel</key>
+						<string>Profile 1</string>
+						<key>uid</key>
+						<string>89405FCD-16B2-497B-8160-24258B6B12A7</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>Work</string>
+						<key>outputlabel</key>
+						<string>Profile 2</string>
+						<key>uid</key>
+						<string>9DEF4A0A-3685-4FFD-BB4D-F3FBB7EB00A1</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>C8A61AA2-741B-4953-A06F-AA8D3A249149</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$2
+
+echo -n $query
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Profile 1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>71273B16-E981-4C44-AC42-96D302F3F0E1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$3
+
+echo -n $query
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Profile 2"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A62B3186-CA3E-44D2-931E-B1070E58AD2D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This is a very simple workflow that will open different chrome profiles using a simple Alfred command. Each time you use the keyword, a new chrome window for the specified profile will open.
+
+The workflow is built with arguments 1, 2 and 3. "cp 1" opens the first chrome profile (usually called "Default" by chrome), "cp 2" the second (called Profile 1 by chrome) and so on.
+
+cp 1 = Default
+cp 2 = Profile 1
+cp 3 = Profile 2
+
+This workflow will require some simple customization to function properly with your Chrome-assigned profile names differ from above or you want to change the associated argument (eg you want Profile 1 to open with cp 1)
+
+You will need to change the [Profile #] in each script to match the chrome created profile name you want to open. This is NOT the chrome profile name you created.
+
+You can pull the proper chrome-assigned profile name by going to: 
+chrome://version/
+
+Under "Profile Path" copy the end of the pathway: /Users/[YOUR USERNAME]/Library/Application Support/Google/Chrome/Profile 5
+
+In the above example, the proper profile name is: "Profile 5"
+
+In each /bin/zsh, you will need to update the profile name to match yours for example, in the top /bin/zsh:
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Default"
+
+becomes
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Profile 5"
+
+I hope those of you will multiple profiles will find this useful and others will improve on the functionality!
+
+See instructions in Alfred Workflows Forum</string>
+	<key>uidata</key>
+	<dict>
+		<key>03B29E8B-5519-4DF5-8D5A-42A32063AC9C</key>
+		<dict>
+			<key>xpos</key>
+			<real>55</real>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>71273B16-E981-4C44-AC42-96D302F3F0E1</key>
+		<dict>
+			<key>xpos</key>
+			<real>410</real>
+			<key>ypos</key>
+			<real>140</real>
+		</dict>
+		<key>A62B3186-CA3E-44D2-931E-B1070E58AD2D</key>
+		<dict>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>275</real>
+		</dict>
+		<key>B11B354A-0180-492E-89EA-E105899AB2F5</key>
+		<dict>
+			<key>xpos</key>
+			<real>400</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>C8A61AA2-741B-4953-A06F-AA8D3A249149</key>
+		<dict>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>v1.1</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
