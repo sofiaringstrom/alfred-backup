@@ -104,7 +104,7 @@ echo -n $query
 				<key>keyword</key>
 				<string>chrome</string>
 				<key>subtext</key>
-				<string></string>
+				<string>private or work</string>
 				<key>text</key>
 				<string>Open Chrome Profile</string>
 				<key>withspace</key>
